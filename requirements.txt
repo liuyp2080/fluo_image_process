@@ -2,3 +2,5 @@ streamlit
 scikit-image
 numpy
 pillow
+PyWavelets
+
