@@ -94,7 +94,7 @@ with Tab1:
     if uploaded_file is not None:
         img = skimage.io.imread(uploaded_file)
     else:
-        img = skimage.io.imread(r'D:\digdata\fluo_image\S-p-mTOR_filter_median_1.2_contrast.tif')
+        img = skimage.io.imread('S-p-mTOR_filter_median_1.2_contrast.tif')
    
     col1, col2 = st.columns(2)
     with col1:    
@@ -208,7 +208,7 @@ with Tab2:
     if uploaded_file2 is not None:
         img_color = skimage.io.imread(uploaded_file2)
     else:
-        img_color = skimage.io.imread(r'D:\digdata\fluo_image\S-p-mTOR_filter_median_1.2_contrast.tif')
+        img_color = skimage.io.imread('S-p-mTOR_filter_median_1.2_contrast.tif')
     null_color = np.zeros_like(img_color[:, :, 0])
     col6, col7 , col8= st.columns(3)
     with col6:
@@ -282,7 +282,7 @@ with Tab3:
     if uploaded_file3 is not None:
         image_orginal = skimage.io.imread(uploaded_file3)
     else:
-        image_orginal = skimage.io.imread(r'D:\digdata\fluo_image\5s-2h-20um-2.bmp')
+        image_orginal = skimage.io.imread('5s-2h-20um-2.bmp')
             
     col9, col10, col11 = st.columns(3)
     col12,col13,col14 = st.columns(3)
@@ -355,13 +355,13 @@ with Tab4:
         if uploaded_file4 is not None:
             image = skimage.io.imread(uploaded_file4)
         else:
-            image = skimage.io.imread(r'D:\digdata\fluo_image\5s-2h-20um-1.bmp')
+            image = skimage.io.imread('5s-2h-20um-1.bmp')
     with col_d:
         uploaded_file5 = st.file_uploader("选择参考图像...", type=["jpg", "png", "tif", "tiff","bmp"])
         if uploaded_file5 is not None:    
             reference = skimage.io.imread(uploaded_file5)
         else:
-            reference = skimage.io.imread(r'D:\digdata\fluo_image\5s-2h-20um-2.bmp')
+            reference = skimage.io.imread('D5s-2h-20um-2.bmp')
     with col_f:
         st.write('待匹配图像')
         # image_hdx=separate_stains(image,hdx_from_rgb,channel_axis=-1)
