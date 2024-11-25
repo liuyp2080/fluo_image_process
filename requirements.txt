@@ -1,4 +1,4 @@
 streamlit
-scikit-image==0.21.0
+scikit-image
 numpy
 pillow
