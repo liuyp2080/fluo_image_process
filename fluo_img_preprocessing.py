@@ -121,7 +121,6 @@ with Tab1:
             img = img_as_float(img)
             sigma_est = estimate_sigma(img, average_sigmas=True)
             if denoise_selector == "Bilateral Filter":
-                # spatial_sigma= st.slider("Spatial sigma", min_value=1.0, max_value=15.0, value=5.0, step=0.1)
                 img_denoised=denoise_bilateral(img, sigma_color=0.05,sigma_spatial=15,channel_axis=-1)
                 st.image(img_denoised)
             elif denoise_selector == "Wavelet Filter":
@@ -361,7 +360,7 @@ with Tab4:
         if uploaded_file5 is not None:    
             reference = skimage.io.imread(uploaded_file5)
         else:
-            reference = skimage.io.imread('D5s-2h-20um-2.bmp')
+            reference = skimage.io.imread('5s-2h-20um-2.bmp')
     with col_f:
         st.write('待匹配图像')
         # image_hdx=separate_stains(image,hdx_from_rgb,channel_axis=-1)
